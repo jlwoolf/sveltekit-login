@@ -1,0 +1,2 @@
+token=`curl -d '{"identity":"jlwoolf@proton.me", "password":"wPv3Q4Nz2p4izE5"}' -H "Content-Type: application/json" -X POST http://localhost:8090/api/admins/auth-with-password | jq -r '.token'`
+iso_date=`date -d '-1 day' -u --iso-8601`
