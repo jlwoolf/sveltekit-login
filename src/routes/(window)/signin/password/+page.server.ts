@@ -7,6 +7,8 @@ export const load: PageServerLoad = async ({ url, fetch }) => {
 		const sid = url.searchParams.get('sid');
 		const res = await fetch(`/api/sessions/${sid}`);
 
+		console.log(sid)
+
 		if (res.ok) {
 			const data: apiSession = JSON.parse(await res.text());
 			return data;

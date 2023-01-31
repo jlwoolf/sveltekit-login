@@ -32,8 +32,6 @@
 		message: string;
 		email: string;
 	};
-
-	// TODO: On page close, delete SID session
 </script>
 
 <LoginWindow {disabled} {progress}>

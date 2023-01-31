@@ -2,8 +2,7 @@
 	import Button from '$lib/components/Button.svelte';
 	import LoginHeader from '$lib/components/login/LoginHeader.svelte';
 	import LoginWindow from '$lib/components/login/LoginWindow.svelte';
-
-	//TODO: finish timeout page
+	import StopwatchSvg from '$lib/components/StopwatchSvg.svelte';
 </script>
 
 <LoginWindow>
@@ -15,6 +14,8 @@
 	<a href="/signin">
 		<Button>Sign in</Button>
 	</a>
+
+	<StopwatchSvg/>
 </LoginWindow>
 
 <style>
@@ -24,5 +25,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		padding-bottom: 20px;
 	}
 </style>

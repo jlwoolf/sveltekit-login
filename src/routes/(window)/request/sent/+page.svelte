@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Button from '$lib/components/Button.svelte';
+	import EmailSvg from '$lib/components/EmailSvg.svelte';
 import LoginHeader from '$lib/components/login/LoginHeader.svelte';
 	import LoginWindow from '$lib/components/login/LoginWindow.svelte';
 </script>
@@ -13,6 +14,8 @@ import LoginHeader from '$lib/components/login/LoginHeader.svelte';
     <a href="/signin">
 		<Button>Sign in</Button>
 	</a>
+
+	<EmailSvg/>
 </LoginWindow>
 <style>
     a {

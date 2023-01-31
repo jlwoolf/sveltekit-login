@@ -12,6 +12,6 @@ export const load: PageServerLoad = async ({ fetch, url }) => {
             pb.collection('users').requestPasswordReset(session.data?.email);
 		return session;
 	} else {
-		throw redirect(302, `${url.origin}/signin`);
+		throw redirect(302, `/signin`);
 	}
 };
