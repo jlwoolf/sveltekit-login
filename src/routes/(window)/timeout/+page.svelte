@@ -7,12 +7,12 @@
 
 <LoginWindow>
 	<LoginHeader
-		header="Session Expired"
-		desc="Unfortunately, this login session has expired. Click the button below to load a new session."
+		header="You're not signed in"
+		desc="Your session ended because there was no activity. Try signing in again."
 	/>
 
 	<a href="/signin">
-		<Button>Sign in</Button>
+		<Button>Try again</Button>
 	</a>
 
 	<StopwatchSvg/>
