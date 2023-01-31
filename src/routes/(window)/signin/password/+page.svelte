@@ -10,6 +10,7 @@
 	import { page } from '$app/stores';
 	import Button from '$lib/components/Button.svelte';
 	import InvisibleButton from '$lib/components/InvisibleButton.svelte';
+	import Checkbox from '$lib/components/Checkbox.svelte';
 
 	export let data: apiSession;
 	let loginData: apiLogin = data.data ?? {};
@@ -24,6 +25,7 @@
 	let duration = 200;
 	let disabled = false;
 	let progress = false;
+	let checked = false;
 	let url = $page.url;
 
 	onMount(async () => {
@@ -73,7 +75,7 @@
 		<LoginInput
 			placeholder="Enter your password"
 			style="padding-top: 16px"
-			type="password"
+			type={checked ? "text" : "password"}
 			name="password"
 			bind:input
 			value={form?.password ?? loginData.password ?? ''}
@@ -82,6 +84,7 @@
 		/>
 		<input type="email" name="email" style="display: none;" value={getEmail()} />
 		<ErrorMessage message={form?.message ?? ''} style="padding-top: 4px;" />
+		<Checkbox bind:checked>Show password</Checkbox>
 		<div class="lower">
 			<Button formaction="?/login&{url.searchParams.toString()}">Next</Button>
 			<InvisibleButton formaction="?/forgot&{url.searchParams.toString()}"
