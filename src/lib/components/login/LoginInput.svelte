@@ -76,25 +76,36 @@
 		background-color: var(--bg-color);
 	}
 
-	input:autofill,
-	input:autofill:hover,
-	input:autofill:focus,
-	input:autofill:active {
+	input:autofill {
 		caret-color: var(--text-color);
-		background-color: var(--bg-color);
+		background-color: rgba(var(--special-color-rgb), 0.1);
 		color: var(--text-color);
-		box-shadow: 0 0 0px 1000px var(--bg-color) inset;
+		box-shadow: 0 0 0px 1000px rgba(var(--special-color-rgb), 0.1) inset;
 	}
 
-	input:-webkit-autofill,
-	input:-webkit-autofill:hover,
-	input:-webkit-autofill:focus,
-	input:-webkit-autofill:active {
+	
+	input:-webkit-autofill {
 		caret-color: var(--text-color);
 		transition: background-color 5000s ease-in-out 0s;
 
 		-webkit-text-fill-color: var(--text-color);
-		-webkit-box-shadow: 0 0 0px 1000px var(--bg-color) inset;
+		-webkit-box-shadow: 0 0 0px 1000px rgba(var(--special-color-rgb), 0.1) inset;
+	}
+
+	input:autofill ~ label {	
+		color: rgba(var(--text-color-rgb), 0.5);
+	}
+
+	input:-webkit-autofill ~ label {
+		color: rgba(var(--text-color-rgb), 0.5);
+	}
+
+	input:autofill:focus ~ label {
+		color: var(--special-color)
+	}
+
+	input:-webkit-autofill:focus ~ label {
+		color: var(--special-color)
 	}
 
 	.error input {
@@ -112,4 +123,5 @@
 	.error input:focus ~ label {
 		color: var(--error-color);
 	}
+
 </style>
