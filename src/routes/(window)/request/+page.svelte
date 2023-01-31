@@ -112,7 +112,7 @@
 		</div>
 		<LoginInput
 			placeholder="Enter your email"
-			style="padding-top: 0px"
+			style="padding-top: 8px"
 			type="text"
 			name="email"
 			bind:input={email}
@@ -134,11 +134,11 @@
 	}
 
 	.first {
-		padding-right: 14px;
+		padding-right: 7px;
 	}
 
 	.last {
-		padding-left: 14px;
+		padding-left: 7px;
 	}
 
 	.lower {

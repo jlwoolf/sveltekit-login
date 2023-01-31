@@ -4,7 +4,8 @@
 	export let style = '';
 </script>
 
-<div style="opacity: {message ? '100%' : '0%'}; font-size: {size}px; {style}">
+{#if message}
+<div style="font-size: {size}px; {style}">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: {size / 0.6}px; margin-right: {size/3}px;">
 		<g stroke-width="0" />
 		<g stroke-linecap="round" stroke-linejoin="round" />
@@ -16,6 +17,8 @@
 	</svg>
 	<span>{message}</span>
 </div>
+{/if}
+
 
 <style>
 	div {
